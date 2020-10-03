@@ -37,11 +37,12 @@ body {
     right: 0;
     bottom: 0;
     margin: auto;
+    user-select: none;
 }
 
 @media screen and (max-width: 768px) {
     .container {
-        height: 100vh;
+        height: 100%;
     }
 
     .magicCircle {
