@@ -5,7 +5,7 @@
     const st1 = document.querySelector('.st1');
     const button = document.getElementById('button');
 
-    button.addEventListener("ontouchstart",()=> {
+    button.addEventListener("click",()=> {
         st0.classList.add('active');
         st1.classList.add('active');
     }, false);
