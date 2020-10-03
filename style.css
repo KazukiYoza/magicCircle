@@ -1,0 +1,144 @@
+body {
+    background-color: #000;
+}
+
+.container {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.magicCircle {
+    width: 80%;
+    height: 100%;
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+}
+
+.magicCircle svg {
+    width: 100%;
+    height: 100%;
+    /* display: none; */
+}
+
+#button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    background: radial-gradient(#fff 30%, #255CF4);
+    box-shadow: 1px 1px 10px 10px #255cf4;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        height: 100vh;
+    }
+
+    .magicCircle {
+        width: 100%;
+    }
+    #button {
+        width: 30px;
+        height: 30px;
+}
+}
+
+
+
+.st0 {
+    fill: #255CF4;
+    /* filter: drop-shadow(30px 10px 4px #dd9b44); */
+}
+
+.st1 {
+    fill: #FFFFFF;
+}
+
+.container .st0 {
+    fill: transparent;
+    stroke: #255cf4;
+    stroke-width: 0;
+    stroke-dasharray: 1500;
+    stroke-dashoffset: 0;
+    /* animation: path-blue 15s ease-in-out forwards; */
+}
+
+.container .st1 {
+    fill: transparent;
+    stroke: #ffffff;
+    stroke-width: 0;
+    stroke-dasharray: 1500;
+    stroke-dashoffset: 0;
+    /* animation: path-white 15s ease-in-out forwards; */
+}
+
+.st0.active{
+    animation: path-blue 15s ease-in-out forwards;
+}
+.st1.active{
+    animation: path-white 15s ease-in-out forwards;
+}
+
+@keyframes path-blue {
+    0% {
+        fill: transparent;
+        stroke-dashoffset: 1000;
+    }
+    10%{
+        stroke-width: 1;
+    }
+
+    80% {
+        fill: transparent;
+        stroke-width: 1;
+    }
+
+    95% {
+        fill: #255cf4;
+        stroke-width: 1;
+        stroke-dashoffset: 0;
+    }
+
+    100% {
+        fill: #255cf4;
+        stroke-width: 1;
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes path-white {
+    0% {
+        fill: transparent;
+        stroke-dashoffset: 1500;
+    }
+    10%{
+        stroke-width: 1;
+    }
+
+    80% {
+        fill: transparent;
+        stroke-width: 1;
+    }
+
+    95% {
+        fill: #ffffff;
+        stroke-width: 1;
+        stroke-dashoffset: 0;
+    }
+
+    100% {
+        fill: #ffffff;
+        stroke-width: 1;
+        stroke-dashoffset: 0;
+    }
+}
